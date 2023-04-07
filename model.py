@@ -186,7 +186,7 @@ class Model:
                                 chunk_size=chunk_size,
                                 merging_ratio=merging_ratio,
                                 )
-        return utils.create_video(result, fps, path=save_path, watermark=gradio_utils.logo_name_to_path(watermark))
+        return result
 
     def process_controlnet_pose(self,
                                 video_path,
@@ -248,7 +248,7 @@ class Model:
                                 chunk_size=chunk_size,
                                 merging_ratio=merging_ratio,
                                 )
-        return utils.create_gif(result, fps, path=save_path, watermark=gradio_utils.logo_name_to_path(watermark))
+        return result
 
     def process_controlnet_canny_db(self,
                                     db_path,
@@ -314,7 +314,7 @@ class Model:
                                 chunk_size=chunk_size,
                                 merging_ratio=merging_ratio,
                                 )
-        return utils.create_gif(result, fps, path=save_path, watermark=gradio_utils.logo_name_to_path(watermark))
+        return result
 
     def process_pix2pix(self,
                         video,
@@ -352,7 +352,7 @@ class Model:
                                 chunk_size=chunk_size,
                                 merging_ratio=merging_ratio
                                 )
-        return utils.create_video(result, fps, path=save_path, watermark=gradio_utils.logo_name_to_path(watermark))
+        return result
 
     def process_text2video(self,
                            prompt,
@@ -422,4 +422,4 @@ class Model:
                                 split_to_chunks=True,
                                 chunk_size=chunk_size,
                                 )
-        return utils.create_video(result, fps, path=path, watermark=gradio_utils.logo_name_to_path(watermark))
+        return result
