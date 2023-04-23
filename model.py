@@ -6,10 +6,10 @@ import torch
 
 from diffusers import StableDiffusionInstructPix2PixPipeline, StableDiffusionControlNetPipeline, ControlNetModel, UNet2DConditionModel
 from diffusers.schedulers import EulerAncestralDiscreteScheduler, DDIMScheduler
-from text_to_video_pipeline import TextToVideoPipeline
+from Text2Video_Zero.text_to_video_pipeline import TextToVideoPipeline
 
-import utils
-import gradio_utils
+from Text2Video_Zero import utils
+from Text2Video_Zero import gradio_utils
 import os
 on_huggingspace = os.environ.get("SPACE_AUTHOR_NAME") == "PAIR"
 
