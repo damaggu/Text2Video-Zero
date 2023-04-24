@@ -186,7 +186,7 @@ class Model:
                                 chunk_size=chunk_size,
                                 merging_ratio=merging_ratio,
                                 )
-        return result
+        return result, control
 
     def process_controlnet_pose(self,
                                 video_path,
