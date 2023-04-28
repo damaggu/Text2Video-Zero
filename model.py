@@ -54,7 +54,7 @@ class Model:
         gc.collect()
         safety_checker = kwargs.pop('safety_checker', None)
         self.pipe = self.pipe_dict[model_type].from_pretrained(
-            model_id, safety_checker=safety_checker, **kwargs).to(self.device).to(self.dtype)
+            model_id, safety_checker=safety_checker, **kwargs).to(self.device).to(torch_dtype=self.dtype)
         self.model_type = model_type
         self.model_name = model_id
 
